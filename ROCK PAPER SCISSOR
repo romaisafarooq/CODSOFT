@@ -1,0 +1,42 @@
+import random
+
+while True:
+    your_points = 0
+    comp_points = 0
+
+    options = ['rock', 'paper', 'scissors']
+    comp_entry = random.choice(options)
+    your_entry = input('Enter your choice from rock (r), paper (p), or scissors (s): ')
+    
+    print('Computer entry is', comp_entry)
+
+    if your_entry not in ['r', 'p', 's']:
+        print('Invalid input. Please choose from r, p, or s.')
+        continue
+
+    if your_entry == 'r' and comp_entry == 'paper':
+        comp_points += 1
+    elif your_entry == 'p' and comp_entry == 'rock':
+        your_points += 1
+    elif your_entry == 's' and comp_entry == 'paper':
+        your_points += 1
+    elif your_entry == 'r' and comp_entry == 'scissors':
+        your_points += 1
+    elif your_entry == 'p' and comp_entry == 'scissors':
+        comp_points += 1
+    elif your_entry == 's' and comp_entry == 'rock':
+        comp_points += 1
+
+    print('Your current points are', your_points)
+    print('Computer points are', comp_points)
+
+    play_again = input('Do you want to play again? (yes/no): ')
+    if play_again.lower() != 'yes':
+        break
+
+if your_points > comp_points:
+    print('Congratulations! You won. Your final points are', your_points)
+elif your_points == comp_points:
+    print('The match is a draw.')
+else:
+    print('You lost. Your final points are', your_points)
