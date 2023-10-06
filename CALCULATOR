@@ -1,0 +1,22 @@
+num1= int(input('enter first number'))
+num2= int(input('enter second number'))
+opr= int(input('enter operation\n 1 for plus,2 for minus,3 for multiply, 4 for divide and 5 for remainder'))
+
+if opr==1:
+    ans=num1+num2
+    print(ans)
+elif opr==2:
+    ans=num1-num2  
+    print(ans)
+ 
+elif opr==3:
+    ans=num1*num2
+    print(ans)  
+elif opr==4:
+    ans=num1/num2 
+    print(ans)
+elif opr==5:
+    ans=num1%num2
+    print(ans)  
+else:
+    print('wrong input')            
